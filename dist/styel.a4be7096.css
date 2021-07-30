@@ -1,0 +1,163 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+*:before,*:after{box-sizing: border-box;}
+ul,li{list-style: none;}
+a{color: inherit;text-decoration: none;}
+
+
+body{
+    /* 给body加背景色 它会自动填充整个网页 */
+    background:#eee;
+}
+.globalHeader{
+    margin: 20px;
+}
+@media (min-width:500px) {
+    .globalHeader{
+        margin: 60px 0 100px;
+    }
+}
+.searchFrom{
+    display: flex;
+}
+/* 我只影响大于500像素的*/
+@media (min-width:500px){
+    .searchFrom{
+        max-width: 400px;
+        /* 当宽度固定是可以用margin:0 auto 来设置居中 */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* 我只影响小于500像素的 */
+@media (max-width:500px){
+
+}
+.searchFrom > input{
+    /* display: flex; */
+    width: 100%;
+    margin-right: 20px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    /* input button默认有border */
+    border: 1px solid #ddd;
+}
+
+.searchFrom > button{
+    /* 不要换行 */
+    white-space: nowrap;
+    padding: 0 28px;
+    font-size: 16px;
+    background: rgb(80, 99, 208);
+    color: white;
+    border-radius: 4px;
+    border:none;
+}
+.globalMain{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.siteList{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /* 这样布局有坑 */
+    justify-content: space-between;
+}
+@media (min-width:500px){
+    .siteList{
+        margin-left: -25px;
+        margin-right: 0;
+        /* 在pc中覆盖掉  默认就行 */
+        justify-content: flex-start;
+    }
+}
+
+.siteList > li{
+    margin-bottom: 10px;
+}
+@media (min-width:500px) {
+    .siteList > li{
+        margin-right: 25px;
+    }   
+}
+
+.siteList .site{
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.siteList .site > .logo{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    /* 全部大写 */
+    text-transform: uppercase;
+}
+/* 鼠标浮现close */
+.siteList .site:hover > .close{
+    display: block;
+}
+
+.siteList .site > .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 4px;
+    font-size: 20px;
+    display: none;
+    cursor: default;
+}
+
+.siteList .site > .link{
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.siteList .addButton{
+    background: #fff;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    
+}
+
+.siteList .addButton .icon-warpper{
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.siteList .addButton .icon{
+    width: 56px;
+    height: 56px;
+}
+
+.siteList .addButton .text{
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+
+
+
+/*# sourceMappingURL=/styel.a4be7096.css.map */
